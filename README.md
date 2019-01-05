@@ -8,8 +8,8 @@ A sample project for recruitment
 
 ## Run
 
-`java -jar target/ldaptest.jar`
+`java -jar target/ldaptest-exec.jar`
 
 ## Test
 
-``curl http://localhost:8080/users/User_1
+`curl http://localhost:8080/users/User_1`

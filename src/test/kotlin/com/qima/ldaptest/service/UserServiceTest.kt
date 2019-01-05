@@ -29,4 +29,28 @@ class UserServiceTest {
         // Then
         assertThat(groups).isEqualTo(listOf("Group_1", "Group_2", "Group_3", "Group_4", "Group_5"))
     }
+
+    @Test
+    fun `getGroups with user id 2`() {
+        // Given
+        val userService = UserService(LdapMockRepository())
+
+        // When
+        val groups = userService.getGroups("User_2")
+
+        // Then
+        assertThat(groups).isEqualTo(listOf("Group_2", "Group_4"))
+    }
+
+    @Test
+    fun `getGroups with user id 3`() {
+        // Given
+        val userService = UserService(LdapMockRepository())
+
+        // When
+        val groups = userService.getGroups("User_3")
+
+        // Then
+        assertThat(groups).isEqualTo(listOf("Group_72"))
+    }
 }
